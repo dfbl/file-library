@@ -1,0 +1,6 @@
+{
+	"require": {
+		"monolog/monolog": "1.0.*",
+                "ircmaxell/password-compat": "1.0.*"
+	}
+}
