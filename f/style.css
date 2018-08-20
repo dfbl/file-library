@@ -1,0 +1,262 @@
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 0;
+    height:100%;
+    width:100%;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    /* remove scrollbar space */
+    background: transparent;
+    /* optional: just make scrollbar invisible */
+}
+
+body {
+    background-color: #ffd1f3;
+    background-size: 100% 100%;
+    font-family: 'Lato', sans-serif; 
+    font-size: 15px;
+    margin: 0;
+    height:100%;
+    width:100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+}
+
+.navi ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(to right, #82e0ff, #1C3070);
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 75px;
+    z-index: 1;
+}
+
+.navi li {
+    float: left;
+}
+
+.navi li a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  margin-top: 13px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navi li a:hover:not(.active) {
+  color: white;
+  text-decoration: underline white;
+  border-radius: 25px;
+}
+
+.navi .active {
+  background-color: #ffd1f3;
+  color: #1c3070;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+.navi :hover.active {
+  text-decoration: none;
+  color: white;
+}
+
+.navi .title {
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.navi .title img {
+  width: 80px;
+}
+
+.navi :hover.title {
+  text-decoration: none;
+}
+
+.box {
+  background-color: #fff;
+  height: 100%;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-bottom: 50px;
+  margin-top: 120px;
+  padding: 50px;
+  border-radius: 25px;
+}
+
+h1 {
+  font-size: 22px;
+  color: #1C3070;
+}
+
+/* Registration Modal */
+.registration-container {
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: roboto;
+}
+
+.registration-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.registration-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.registration-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Login Modal */
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+}
+
+.loginmodal-submit {
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #1C3070;
+  padding: 17px 0px;
+  font-family: roboto;
+  font-size: 14px;
+}
+
+.loginmodal-submit:hover {
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #000C36;
+}
+
+
+.login-btn {
+  text-align:center;
+  margin-top: 50px;
+}
+
+.button {
+  line-height: 55px;
+  padding: 0px 15px;
+  border: 0px;
+  background: #1C3070;
+  color: #fff;
+  display: inline-block;
+  font-family: roboto;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.button:hover,
+.button:visited {
+  background: #000C36;
+  color: #fff;
+  text-decoration: none;
+}
+
+.req {
+    color: #000;
+    position: relative;
+    padding-left: 10px;
+    margin-top: 0px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.req.valid {
+    color: green;
+}
+
+.req.invalid {
+    color: gray;
+}
+
+.mod, .mod a {
+   text-align: center;
+   font-family: 'Lato', sans-serif;
+   font-size: 15px;   
+   font-weight: normal;
+   opacity: 0.6;
+   transition: 0.4s;
+   color: #000;
+   text-decoration: none;
+}
+
+.mod:hover {
+   opacity: 1;
+}
+
+.errorMessage {
+   color: red;
+   font-weight: bold;
+   font-size: 14px;
+}
+
+.errorMessage.hide {
+   display: none;
+}
+
+.errorMessage.show {
+   display: inline;
+}
+
+.hide {
+   display: none;
+}
+
+.show {
+   display: inline;
+}
+
+.highlight:hover {
+   background-color: #C7C7C7;
+}
